@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import styled from 'styled-components';
 import {CustomSelect} from './CustomSelect'
 import Search from './Search'
@@ -21,9 +21,17 @@ const options = [
   { value: 'Oceania', label: 'Oceania' },
 ];
 
-export default function Controls() {
+export default function Controls({onSearch}) {
 	const [search, setSearch] = React.useState('');
 	const [region, setRegion] = React.useState(null);
+
+	useEffect(() => {
+    const regionValue = region?.value || '';
+    onSearch(search, regionValue);
+    // eslint-disable-next-line
+  }, [search, region]);
+
+
 	return (
 		<Wrapper>
 			<Search 

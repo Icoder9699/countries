@@ -19,10 +19,10 @@ body[data-theme='dark']{
   --shadow: 0 0 3px hsl(0,0%, 100%);
   --colors-text: hsl(0,0%, 100%);
   --colors-bg: hsl(207,20%,17%);
-  --colors-ui-base: hsl(200,21%,22%);
+  --colors-ui-base: rgb(38, 45, 49);
 }
 body[data-theme='light']{
-  --shadow: 0 0 3px hsl(200, 15%, 8%);
+  --shadow: 0 0 3px hsl(0, 0%, 51%);
   --colors-text:  hsl(200, 15%, 8%);
   --colors-bg: hsl(0,0%,98%);
   --colors-ui-base: hsl(0,0%,100%);
